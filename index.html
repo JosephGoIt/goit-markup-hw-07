@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Work 5</title>
+    <title>Home Work 7</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" > 
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
     rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header class="header container">
         <div class="header-box">
             <a href="webstudio" class="logo" id="logo-id"><span>WEB</span>STUDIO</a>
             <ul class="nav-list list">
@@ -25,20 +25,65 @@
             <li><a href="mailto:info@devstudio.com" class="contact-link link">info@devstudio.com</a></li>
             <li><a href="tel:+110001111111" class="contact-link link">+11 (000) 111-11-11</a></li>
         </ul>
+        <svg width="32" height="22" class="js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <use href="./images/icons.svg#hamburger"></use>
+        </svg>
     </header>
+    <div class="js-menu-container mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-container">
+            <button class="js-close-menu">
+                <svg width="18" height="18">
+                    <use href="./images/icons.svg#close"></use>
+                </svg>
+            </button>
+            <nav class="mobile-navbar">
+                <ul>
+                    <li>
+                        <a href="index.html" class="mobile-link link">Studio</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html" class="mobile-link link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="" class="mobile-link link">Contacts</a>
+                    </li>
+                </ul>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="">11 (000) 111-11-11</a>
+                        </li>
+                        <li>
+                            <a href="">info@devstudio.com</a>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <!-- icons here-->
+                        <li>
+                            <a href="">FB</a>
+                            <a href="">IG</a>
+                            <a href="">LI</a>
+                            <a href="">TW</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
     <main class="main">
-        <div class="hero">
+        <div class="hero container">
             <h1>Effective Solution<br>for Your Business</h1>
             <button type="button" class="order-button button" data-modal-open>Order Service</button>
             <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
-                    <!-- <div class="btn-container"> -->
+                    <div class="btn-container">
                         <button class="modal-close-btn" data-modal-close>
                             <svg class="x-btn">
                                 <use xlink:href="./images/icons.svg#close"></use>
                             </svg>
                         </button>
-                    <!-- </div> -->
+                    </div>
                     <p>Leave your contacts and we will call you back</p>
                     <form class="contact-form">
                             <label for="name" class="contact-label">
@@ -78,7 +123,7 @@
                 </div>
             </div>
         </div>
-        <section class="service">
+        <section class="service container">
             <ul class="service-features list">
                 <li class="service-li">
                     <div class="service-icon>">
@@ -118,7 +163,7 @@
                 </li>
             </ul>
         </section>
-        <section class="platform">
+        <section class="platform container">
             <h2>What are we doing</h2>
             <ul class="platform-types list">
                 <li><img src="images/image1.jpg" alt="desktop image" height="300" width="360" class="pics"></li>
@@ -126,7 +171,7 @@
                 <li><img src="images/image3.jpg" alt="tablet image" height="300" width="360" class="pics"></li>
             </ul>
         </section>
-        <section class="team">
+        <section class="team container">
             <h2>Our Team</h2>
             <ul class="team-members list">
             <li class="team-card">   
@@ -247,7 +292,7 @@
             </li>
             </ul>
         </section>
-        <section class="clients">
+        <section class="clients container">
             <h2>Customers</h2>
             <div class="clients-logo">
                 <a class="client-icon">
@@ -283,7 +328,7 @@
             </div>   
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer container">
         <div class="footer-text">
             <a href="webstudio" class="logo" id="logo-footer"><span>WEB</span>STUDIO</a>
             <p class="footer-p">Increase the flow of customers and sales for your business with digital marketing & growth solutions.</p>
@@ -326,6 +371,12 @@
             </form>
         </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/mobile-menu.js"></script>
+    <script type="text/javascript" src="./js/modal.js"></script>
 </body>
 </html>
